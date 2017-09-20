@@ -1,10 +1,13 @@
 var firstVowelRegex = /[a,e,i,o,u]/i
+var notLetterRegex = /[^a-z]/i
 
-
+// Returns pig latin-ated word, or null if not a word
 var toPigLatin = function(word) {
   var firstVowelIndex = word.search(firstVowelRegex);
-
-  if (firstVowelIndex === 0) {
+  if (notLetterRegex.test(word)) {
+    return null;
+  }
+  else if (firstVowelIndex === 0) {
     return word + 'way';
   }
   else {
