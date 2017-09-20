@@ -13,6 +13,6 @@ $(document).ready(function(){
     var inputWord = $("#input-form input[name=word]").val();
     var output = toPigLatin(inputWord);
 
-    console.log(output);
+    $("#output h1").text(output);
   });
 });
