@@ -1,4 +1,14 @@
+var firstVowelRegex = /^[a,e,i,o,u]/i
+
+
 var toPigLatin = function(word) {
+  if (firstVowelRegex.test(word)) {
+    return word + 'way';
+  };
+
+
+
+
   return word;
 }
 
