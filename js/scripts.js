@@ -3,7 +3,7 @@ var vowelsNoYRegex = /[a,e,i,o,u]/i
 var notLetterRegex = /[^a-z]/i
 
 // Returns pig latin-ated word, or null if not a word
-var toPigLatin = function(word) {
+var wordToPigLatin = function(word) {
   if (notLetterRegex.test(word)) {
     return null;
   }
@@ -26,16 +26,25 @@ var toPigLatin = function(word) {
   return withConsonantsRemoved + firstConsonants + "ay";
 };
 
+// Returns an entire sentence as pig latin or null if not a valid sentence
+var sentenceToPigLatin = function(sentence) {
+  var words = sentence.split(" ");
+  var pigLatinWords = [];
+  words.forEach(function(word) {
+    if (word !== "") {
+      pigLatinWords.push(wordToPigLatin(word));
+    }
+  });
 
-
-
+  return pigLatinWords.join(" ");
+}
 
 $(document).ready(function(){
   $("#input-form").submit(function(event) {
     event.preventDefault();
 
-    var inputWord = $("#input-form input[name=word]").val();
-    var output = toPigLatin(inputWord);
+    var input = $("#input-form input[name=word]").val();
+    var output = sentenceToPigLatin(input);
 
     $("#output h1").text(output);
   });

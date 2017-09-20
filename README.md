@@ -10,16 +10,16 @@ _Takes a word as input, translates it to Pig Latin, and displays it back to the 
 
 ## Specs
 
-| Behavior - Plain English                                                                        | Input  | Output   |
-|-------------------------------------------------------------------------------------------------|--------|----------|
-| If the input is not a word, do nothing to it                                                    | 123    | 123      |
-| Add -way to the end of words that are a single vowel                                            | I      | Iway     |
-| Add -way to the end of words starting with a vowel                                              | apple  | appleway |
-| For words starting with consonants, move all those consonants to the end and add -ay to the end | sponge | ongespay |
-| For words starting with 'y', treat 'y' as a consonant                                           | yellow | ellowyay |
-| For words with 'y' as the first vowel                                                           | style  | ylestay  |
-| If first consonants include 'qu', move 'qu' along with the rest of the consonants               | query  | eryquay  |
-
+| Behavior - Plain English                                                                        | Input              | Output                       |
+|-------------------------------------------------------------------------------------------------|--------------------|------------------------------|
+| If the input is not a word, do nothing to it                                                    | 123                | 123                          |
+| Add -way to the end of words that are a single vowel                                            | I                  | Iway                         |
+| Add -way to the end of words starting with a vowel                                              | apple              | appleway                     |
+| For words starting with consonants, move all those consonants to the end and add -ay to the end | sponge             | ongespay                     |
+| For words starting with 'y', treat 'y' as a consonant                                           | yellow             | ellowyay                     |
+| Handle words with 'y' as the first vowel                                                        | style              | ylestay                      |
+| If first consonants include 'qu', move 'qu' along with the rest of the consonants               | query              | eryquay                      |
+| If given a sentence, make each word pig-latin-ed                                                | This is a sentence | isThay isway away entencesay |
 ## Setup/Installation Requirements
 
 * _Clone pig-latin project from Github_
