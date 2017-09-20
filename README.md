@@ -16,8 +16,9 @@ _Takes a word as input, translates it to Pig Latin, and displays it back to the 
 | Add -way to the end of words that are a single vowel                                            | I      | Iway     |
 | Add -way to the end of words starting with a vowel                                              | apple  | appleway |
 | For words starting with consonants, move all those consonants to the end and add -ay to the end | sponge | ongespay |
-| If first consonants include 'qu', move 'qu' along with the rest of the consonants               | query  | eryquay  |
 | For words starting with 'y', treat 'y' as a consonant                                           | yellow | ellowyay |
+| For words with 'y' as the first vowel                                                           | style  | ylestay  |
+| If first consonants include 'qu', move 'qu' along with the rest of the consonants               | query  | eryquay  |
 
 ## Setup/Installation Requirements
 
