@@ -15,10 +15,15 @@ var toPigLatin = function(word) {
   else if (firstVowelIndex === 0) {
     return word + 'way';
   }
-
   var firstConsonants = word.slice(0, firstVowelIndex);
-  var moveConsonants = word.substring(firstVowelIndex) + firstConsonants;
-  return moveConsonants + "ay";
+  var withConsonantsRemoved = word.substring(firstVowelIndex);
+
+  if (firstConsonants.slice(-1) === 'q' && withConsonantsRemoved.substring(0, 1) === 'u') {
+    firstConsonants += 'u';
+    withConsonantsRemoved = withConsonantsRemoved.substring(1);
+  }
+
+  return withConsonantsRemoved + firstConsonants + "ay";
 };
 
 
